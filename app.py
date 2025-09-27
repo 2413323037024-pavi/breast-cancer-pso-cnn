@@ -6,7 +6,7 @@ from PIL import Image
 # ------------------------------
 # Load your trained model
 # ------------------------------
-MODEL_PATH = "/content/drive/MyDrive/Mini Propject/final_pso_sgd_cnn.h5"
+MODEL_PATH = "final_pso_sgd_cnn.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # ------------------------------
@@ -49,3 +49,4 @@ if uploaded_file is not None:
     st.write("### 📊 Probabilities:")
     for i, label in enumerate(labels):
         st.write(f"{label}: {prediction[0][i]*100:.2f}%")
+
